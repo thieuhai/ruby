@@ -5,7 +5,7 @@
 #
 # Ensure the MySQL gem is defined in your Gemfile
 #   gem 'mysql2'
-#
+#default: &default
 # And be sure to use new-style password hashing:
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
@@ -18,7 +18,7 @@ default: &default
   socket: /var/run/mysqld/mysqld.sock
 
 development:
-  <<: *default
+  <<: *d
   database: myapp
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -26,6 +26,7 @@ development:
 test:
   <<: *default
   database: myapp
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,5 +50,5 @@ test:
 production:
   <<: *default
   database: myapp_production
-  username: myapp
+  username: root
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
