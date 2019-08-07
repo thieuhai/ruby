@@ -40,3 +40,5 @@ en:
     create:
       flash:
         info: "Please check your email to activate your account."
+    new:
+      title: "Sign up"
