@@ -30,4 +30,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+   edit:
+      title: "Edit user"
+      header: "Update your profile"
+      form:
+        submit: "Save changes"
+      gravatar_change: "change"
+      danger: "Please log in."
+    create:
+      flash:
+        info: "Please check your email to activate your account."
+    new:
+      title: "Sign up"
+      button_text: "Create my account"
